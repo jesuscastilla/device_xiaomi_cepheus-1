@@ -1,0 +1,2 @@
+# allow wificond to access /dev/binderfs/hwbinder
+allow wificond binderfs:chr_file { read write open ioctl map};

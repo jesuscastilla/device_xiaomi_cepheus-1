@@ -9,5 +9,6 @@ allow hal_audio_default audio_socket:sock_file rw_file_perms;
 
 dontaudit hal_audio_default sysfs:dir read;
 
-# For interfacing with PowerHAL
-hal_client_domain(hal_camera_default, hal_power)
+# allow audio to access /dev/binderfs/hwbinder
+allow hal_audio_default binderfs:chr_file { read write open ioctl map};
+

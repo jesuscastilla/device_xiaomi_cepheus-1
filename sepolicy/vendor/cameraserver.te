@@ -1,0 +1,2 @@
+# allow cameraserver to access /dev/binderfs/hwbinder
+allow cameraserver binderfs:chr_file { read write open ioctl map};

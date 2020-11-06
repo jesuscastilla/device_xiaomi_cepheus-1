@@ -1,1 +1,4 @@
 allow hal_wifi_supplicant_default self:capability sys_admin;
+
+# allow to access /dev/binderfs/hwbinder
+allow hal_wifi_supplicant_default binderfs:chr_file { read write open ioctl map };

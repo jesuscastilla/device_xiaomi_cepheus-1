@@ -1,0 +1,2 @@
+# allow gnss to access /dev/binderfs/hwbinder
+allow vendor_hal_gnss_qti binderfs:chr_file { read write open ioctl map };

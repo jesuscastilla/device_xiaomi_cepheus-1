@@ -14,3 +14,6 @@ add_service(system_server, default_android_service);
 allow system_server crash_dump:process getpgid;
 allow system_server hal_light_default:process signal;
 allow system_server init:process signal;
+
+# allow system server to access /dev/binderfs/hwbinder
+allow system_server binderfs:chr_file { read write open ioctl map };

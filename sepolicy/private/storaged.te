@@ -1,0 +1,2 @@
+# allow storaged to access /dev/binderfs/hwbinder
+allow storaged binderfs:chr_file { read write open ioctl map};

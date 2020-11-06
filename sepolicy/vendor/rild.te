@@ -1,3 +1,6 @@
 allow rild vendor_file:file ioctl;
 set_prop(rild, vendor_radio_prop)
 get_prop(rild, default_prop)
+
+# allow rlid to access /dev/binderfs/hwbinder
+allow rild binderfs:chr_file { read write open ioctl map};

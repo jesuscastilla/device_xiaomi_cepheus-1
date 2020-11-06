@@ -5,3 +5,5 @@ allow system_server vendor_sysfs_usb_supply:file { getattr open read write };
 r_dir_file(untrusted_app, vendor_sysfs_battery_supply)
 r_dir_file(untrusted_app, vendor_sysfs_usb_supply)
 
+# allow gmscore_app to access /dev/binderfs/hwbinder
+allow gmscore_app binderfs:chr_file { read write open ioctl map };

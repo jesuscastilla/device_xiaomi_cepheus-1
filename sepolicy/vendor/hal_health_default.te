@@ -1,0 +1,2 @@
+# allow health to access /dev/binderfs/hwbinder
+allow hal_health_default binderfs:chr_file { read write open ioctl map };

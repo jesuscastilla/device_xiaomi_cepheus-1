@@ -1,0 +1,2 @@
+# allow vendor_per_mgr to access /dev/binderfs/hwbinder
+allow vendor_per_mgr binderfs:chr_file { read write open ioctl map};

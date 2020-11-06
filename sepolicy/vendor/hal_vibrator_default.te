@@ -1,0 +1,2 @@
+# allow vibrator to access /dev/binderfs/hwbinder
+allow hal_vibrator_default binderfs:chr_file { read write open ioctl map };

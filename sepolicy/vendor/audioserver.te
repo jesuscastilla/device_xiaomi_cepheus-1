@@ -1,0 +1,2 @@
+# allow audioserver to access /dev/binderfs/hwbinder
+allow audioserver binderfs:chr_file { read write open ioctl map};

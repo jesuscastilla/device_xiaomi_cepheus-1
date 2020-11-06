@@ -1,0 +1,4 @@
+# allow mediacodec to access /dev/binderfs/hwbinder
+allow mediacodec binderfs:chr_file { read write open ioctl map};
+allow mediaswcodec binderfs:chr_file { read write open ioctl map};
+allow mediaextractor binderfs:chr_file { read write open ioctl map};

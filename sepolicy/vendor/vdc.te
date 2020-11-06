@@ -1,0 +1,4 @@
+# allow vdc to access /dev/binderfs/hwbinder
+allow vdc binderfs:chr_file { read write open ioctl map };
+
+allow vdc self:capability { sys_admin kill };
