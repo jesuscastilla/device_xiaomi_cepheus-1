@@ -1,0 +1,4 @@
+# allow everyone to access /dev/binderfs/hwbinder
+allow domain binderfs:chr_file { read write open ioctl map};
+allow appdomain binderfs:chr_file { read write open ioctl map};
+allow coredomain binderfs:chr_file { read write open ioctl map};

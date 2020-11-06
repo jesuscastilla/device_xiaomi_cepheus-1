@@ -6,4 +6,18 @@ r_dir_file(untrusted_app, vendor_sysfs_battery_supply)
 r_dir_file(untrusted_app, vendor_sysfs_usb_supply)
 
 # allow gmscore_app to access /dev/binderfs/hwbinder
+allow priv_app binderfs:chr_file { read write open ioctl map };
+allow runas_app binderfs:chr_file { read write open ioctl map };
+allow appdomain binderfs:chr_file { read write open ioctl map };
+allow app_zygote binderfs:chr_file { read write open ioctl map };
+allow traceur_app binderfs:chr_file { read write open ioctl map };
+allow system_app binderfs:chr_file { read write open ioctl map };
 allow gmscore_app binderfs:chr_file { read write open ioctl map };
+allow platform_app binderfs:chr_file { read write open ioctl map };
+allow isolated_app binderfs:chr_file { read write open ioctl map };
+allow ephemeral_app binderfs:chr_file { read write open ioctl map };
+allow untrusted_app binderfs:chr_file { read write open ioctl map };
+allow untrusted_app_25 binderfs:chr_file { read write open ioctl map };
+allow untrusted_app_27 binderfs:chr_file { read write open ioctl map };
+allow untrusted_app_29 binderfs:chr_file { read write open ioctl map };
+allow untrusted_app_all binderfs:chr_file { read write open ioctl map };

@@ -1,1 +1,6 @@
 hal_client_domain(system_app, hal_mlipay)
+
+# allow media provider to access /dev/binderfs/hwbinder
+allow mediaprovider_app binderfs:chr_file { read write open ioctl map };
+allow vzwomatrigger_app binderfs:chr_file { read write open ioctl map };
+allow permissioncontroller_app binderfs:chr_file { read write open ioctl map };
